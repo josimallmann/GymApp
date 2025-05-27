@@ -5,6 +5,8 @@ import com.gymapp.repository.TreinosRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.util.List;
+
 @Service
 public class TreinosService {
   @Autowired
@@ -19,6 +21,9 @@ public class TreinosService {
     }
 
     return treinosRepository.save (treino);
+  }
+  public List<TreinosModel> listarTreinos() {
+    return treinosRepository.findAll();
   }
 
 }

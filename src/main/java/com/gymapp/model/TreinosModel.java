@@ -1,41 +1,28 @@
 package com.gymapp.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
+@Table(name = "treinos")
+@Getter
+@Setter
 public class TreinosModel {
 
   @Id
-  @lombok.Getter
-  @GeneratedValue (strategy = GenerationType.IDENTITY)
-  public Long id;
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long id;
 
+  private String tipoExercicio;
 
-  @lombok.Getter
-  @lombok.Setter
-  public String tipoExercicio;
+  private String data;
 
-  @lombok.Getter
-  @lombok.Setter
-  public String data;
+  private Double distancia;
 
-  @lombok.Getter
-  @lombok.Setter
-  public Double distancia;
+  private Double tempo;
 
-  @lombok.Getter
-  @lombok.Setter
-  public Double tempo;
+  private Boolean zerado;
 
-  @lombok.Getter
-  @lombok.Setter
-  public Boolean zerado;
-
-  @lombok.Getter
-  @lombok.Setter
-  public Double ritmoMedio;
-
+  private Double ritmoMedio;
 }

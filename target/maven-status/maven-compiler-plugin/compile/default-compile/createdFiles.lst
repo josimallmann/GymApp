@@ -1,0 +1,5 @@
+com\gymapp\ApiTreinosApplication.class
+com\gymapp\repository\TreinosRepository.class
+com\gymapp\model\TreinosModel.class
+com\gymapp\service\TreinosService.class
+com\gymapp\controller\TreinosController.class

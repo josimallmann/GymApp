@@ -1,17 +1,21 @@
 package com.gymapp.model;
 
-import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
-@Entity
-@Table(name = "treinos")
+
+
+@javax.persistence.Entity
+@javax.persistence.Table (name = "treinos")
 @Getter
 @Setter
+@lombok.NoArgsConstructor
+@lombok.AllArgsConstructor
 public class TreinosModel {
 
-  @Id
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  @javax.persistence.Id
+  @javax.persistence.GeneratedValue (strategy = javax.persistence.GenerationType.IDENTITY)
+
   private Long id;
 
   private String tipoExercicio;
@@ -25,4 +29,5 @@ public class TreinosModel {
   private Boolean zerado;
 
   private Double ritmoMedio;
+
 }

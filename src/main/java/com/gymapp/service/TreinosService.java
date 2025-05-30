@@ -4,6 +4,9 @@ import com.gymapp.model.TreinosModel;
 import com.gymapp.repository.TreinosRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Autowired;
+import java.time.LocalDate;
+import java.time.YearMonth;
+import java.time.format.DateTimeFormatter;
 
 import java.util.List;
 
@@ -70,6 +73,34 @@ public class TreinosService {
     return String.format("média tempo: %.2f", media);
   }
 
+  public com.gymapp.response.ResumoMensalResponse calcularResumoDoMes(List<TreinosModel> treinos) {
+    com.gymapp.response.ResumoMensalResponse resumo = new com.gymapp.response.ResumoMensalResponse();
+    YearMonth mesAtual = YearMonth.now();
+    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+
+    List<TreinosModel> treinosDoMes = treinos.stream()
+    .filter(t -> t.getData() != null)
+    .filter(t -> {
+      try {
+        LocalDate data = LocalDate.parse(t.getData(), formatter);
+        return YearMonth.from(data).equals(mesAtual);
+      } catch (Exception e) {
+        return false;
+      }
+    })
+    .toList();
+
+    double totalDistancia = treinosDoMes.stream()
+    .filter(t -> t.getDistancia() != null)
+    .mapToDouble(TreinosModel::getDistancia)
+    .sum();
+
+    long quantidadeTreinos = treinosDoMes.size();
+
+    resumo.setDistanciaTotal(totalDistancia);
+    resumo.setTreinoMes(quantidadeTreinos);
+    return resumo;
+  }
 
   public boolean delete(Long id) {
     TreinosModel existingTreino = findById(id);

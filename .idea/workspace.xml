@@ -4,16 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2ee622ac-66bc-4426-85cd-65906c0786ca" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="2ee622ac-66bc-4426-85cd-65906c0786ca" name="Changes" comment="criação do endpoint que calcula mediaTempo">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gymapp/response/ResumoMensalResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gymapp/ApiTreinosApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gymapp/ApiTreinosApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/gymapp/controller/TreinosController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gymapp/controller/TreinosController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gymapp/model/TreinosModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gymapp/model/TreinosModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gymapp/repository/TreinosRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gymapp/repository/TreinosRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/gymapp/service/TreinosService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gymapp/service/TreinosService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/GymApp-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/GymApp-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/gymapp/ApiTreinosApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gymapp/ApiTreinosApplication.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/gymapp/controller/TreinosController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gymapp/controller/TreinosController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gymapp/model/TreinosModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gymapp/model/TreinosModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gymapp/service/TreinosService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gymapp/service/TreinosService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +35,10 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
@@ -82,6 +91,19 @@
       <option name="presentableId" value="Default" />
       <updated>1748277977926</updated>
     </task>
+    <task id="LOCAL-00001" summary="criação do endpoint que calcula mediaTempo">
+      <option name="closed" value="true" />
+      <created>1748622086514</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1748622086514</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="criação do endpoint que calcula mediaTempo" />
+    <option name="LAST_COMMIT_MESSAGE" value="criação do endpoint que calcula mediaTempo" />
   </component>
 </project>

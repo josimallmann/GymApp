@@ -5,16 +5,16 @@ import lombok.Setter;
 
 
 
-@javax.persistence.Entity
-@javax.persistence.Table (name = "treinos")
+@jakarta.persistence.Entity
+@jakarta.persistence.Table (name = "treinos")
 @Getter
 @Setter
 @lombok.NoArgsConstructor
 @lombok.AllArgsConstructor
 public class TreinosModel {
 
-  @javax.persistence.Id
-  @javax.persistence.GeneratedValue (strategy = javax.persistence.GenerationType.IDENTITY)
+  @jakarta.persistence.Id
+  @jakarta.persistence.GeneratedValue (strategy = jakarta.persistence.GenerationType.IDENTITY)
 
   private Long id;
 

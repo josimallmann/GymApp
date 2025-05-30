@@ -3,8 +3,9 @@ package com.gymapp.controller;
 import com.gymapp.model.TreinosModel;
 import com.gymapp.service.TreinosService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+import com.gymapp.response.ResumoMensalResponse;
 
 import java.util.List;
 
@@ -57,6 +58,12 @@ public class TreinosController {
   @GetMapping("/media-tempo")
   public ResponseEntity<String> getMediaTempo() {
     return ResponseEntity.ok(service.calcularMediaTempo());
+  }
+
+  @GetMapping("/resumo-mensal")
+  public ResumoMensalResponse getResumoMensal() {
+    List<TreinosModel> treinos = service.findAll();
+    return org.springframework.http.ResponseEntity.ok(service.calcularResumoDoMes(treinos)).getBody ();
   }
 
 

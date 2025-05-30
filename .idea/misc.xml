@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
+=======
+>>>>>>> 45333a0 (criando api gymapp)
 <project version="4">
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="MavenProjectsManager">

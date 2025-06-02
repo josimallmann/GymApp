@@ -4,21 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2ee622ac-66bc-4426-85cd-65906c0786ca" name="Changes" comment="criação do endpoint que calcula mediaTempo">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gymapp/response/ResumoMensalResponse.java" afterDir="false" />
+    <list default="true" id="2ee622ac-66bc-4426-85cd-65906c0786ca" name="Changes" comment="criação do endpoint de resumo do mes">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gymapp/model/ValidacaoDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gymapp/ApiTreinosApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gymapp/ApiTreinosApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/gymapp/controller/TreinosController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gymapp/controller/TreinosController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gymapp/model/TreinosModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gymapp/model/TreinosModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gymapp/repository/TreinosRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gymapp/repository/TreinosRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/gymapp/service/TreinosService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gymapp/service/TreinosService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GymApp-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/GymApp-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gymapp/ApiTreinosApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gymapp/ApiTreinosApplication.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/gymapp/controller/TreinosController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gymapp/controller/TreinosController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gymapp/model/TreinosModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gymapp/model/TreinosModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gymapp/service/TreinosService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gymapp/service/TreinosService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,19 +41,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.ApiTreinosApplication.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.ApiTreinosApplication.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="ApiTreinosApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.gymapp.ApiTreinosApplication" />
@@ -99,11 +91,20 @@
       <option name="project" value="LOCAL" />
       <updated>1748622086514</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="criação do endpoint de resumo do mes">
+      <option name="closed" value="true" />
+      <created>1748630692891</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1748630692891</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="criação do endpoint que calcula mediaTempo" />
-    <option name="LAST_COMMIT_MESSAGE" value="criação do endpoint que calcula mediaTempo" />
+    <MESSAGE value="criação do endpoint de resumo do mes" />
+    <option name="LAST_COMMIT_MESSAGE" value="criação do endpoint de resumo do mes" />
   </component>
 </project>

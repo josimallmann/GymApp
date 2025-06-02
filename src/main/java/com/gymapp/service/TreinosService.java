@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import java.time.LocalDate;
 import java.time.YearMonth;
 import java.time.format.DateTimeFormatter;
+import com.gymapp.model.ValidacaoDTO;
 
 import java.util.List;
 
@@ -28,37 +29,49 @@ public class TreinosService {
     return treinosRepository.findById (id).orElseThrow (() -> new RuntimeException ("Treino não encontrado"));
   }
 
-  public TreinosModel update (Long id, TreinosModel treino) {
+  public ValidacaoDTO update (Long id, TreinosModel treino) {
     if (id == null || id < 0) {
-      throw new RuntimeException ("ID ou treino não podem ser nulos");
+      throw new RuntimeException ("ID não ser nulo e nem menor que 0 ");
     }
+
+    if (treino == null) {
+      throw new RuntimeException ("Treino não pode ser nulo");
+    }
+
+    ValidacaoDTO validacao = new ValidacaoDTO();
+
     TreinosModel existingTreino = findById (id);
 
-    if (treino.getDistancia () != null && treino.getDistancia () < 0){
+    if(treino.getDistancia () == null || treino.getDistancia () <= 0){
+      validacao.setMensagem("A distancia não pode ser nula e nem menor ou igual a 0!");
+    }
+
+    if (treino.getTempo () == null || treino.getTempo () <= 0) {
+      validacao.setMensagem("O tempo não pode ser nulo e nem menor ou igual a 0!");
+    }
+
+    if (treino.getZerado () == null || treino.getZerado ().equals (false)) {
+      validacao.setMensagem ("O campo zerado não pode ser nulo e nem falso!");
+    }
+
+    if (treino.getData () == null || treino.getData ().isEmpty ()) {
+      validacao.setMensagem ("A data não pode ser nula e nem vazia!");
+    }
+
+    if (treino.getTipoExercicio () == null || treino.getTipoExercicio ().isEmpty ()) {
+      validacao.setMensagem ("A tipo de exercício não pode ser nulo e nem vazio!");
+    }
+
+    if(validacao.getMensagem() == null || validacao.getMensagem().isEmpty()) {
+      validacao.setMensagem("Treino atualizado com sucesso");
       existingTreino.setDistancia (treino.getDistancia ());
-    }
-
-    if (treino.getTempo () != null && treino.getTempo () < 0) {
       existingTreino.setTempo (treino.getTempo ());
-    }
-
-    if (treino.getZerado () != null && !treino.getZerado ().equals (false)) {
       existingTreino.setZerado (treino.getZerado ());
-    }
-
-    if (treino.getData () != null && !treino.getData ().isEmpty ()) {
       existingTreino.setData (treino.getData ());
-    }
-
-    if (treino.getTipoExercicio () != null && !treino.getTipoExercicio ().isEmpty ()) {
       existingTreino.setTipoExercicio (treino.getTipoExercicio ());
     }
 
-    if (treino.getRitmoMedio () != null && treino.getRitmoMedio () < 0) {
-      existingTreino.setRitmoMedio (treino.getRitmoMedio ());
-    }
-
-    return treinosRepository.save (existingTreino);
+    return validacao;
 
   }
 

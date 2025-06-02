@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import com.gymapp.response.ResumoMensalResponse;
+import com.gymapp.model.ValidacaoDTO;
 
 import java.util.List;
 
@@ -38,7 +39,7 @@ public class TreinosController {
   }
 
   @PutMapping("atualizar/{id}")
-  public ResponseEntity<TreinosModel> update(@PathVariable Long id, @RequestBody TreinosModel treino) {
+  public ResponseEntity<ValidacaoDTO> update(@PathVariable Long id, @RequestBody TreinosModel treino) {
     return ResponseEntity.ok(service.update(id, treino));
   }
 
